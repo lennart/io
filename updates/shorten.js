@@ -1,4 +1,5 @@
 function(doc, req) {
+  //!json io
   //!code vendor/date/date.js
 
   if(doc) {
@@ -23,5 +24,5 @@ function(doc, req) {
   var shortened = shortio();
   doc._id = shortened;
   doc.date = (new Date()).rfc3339();
-  return [doc, "http://lmaa.a0n.name/" + shortened + "\n"];
+  return [doc, io.host + shortened + "\n"];
 }
