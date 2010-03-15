@@ -1,10 +1,10 @@
 function(doc, req) {
-  //json io
-  //
+  // !json io
+  // !json templates.notfound
+  // !code vendor/mustache.js/mustache.js
+
   if(!doc) {
-    return template(templates.404, {
-      twitter: io.twitter 
-    })
+    return Mustache.to_html(templates.notfound, io)
   }
 
   return {
