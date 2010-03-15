@@ -1,6 +1,10 @@
 function(doc, req) {
+  //json io
+  //
   if(!doc) {
-    return "Hey there, this is <a href=\"http://twitter.com/lmaa\">@lmaa's</a> personal URL shortener. Make your own with <a href=\"http://twitter.com/janl\">@janl's</a> <a href=\"http://github.com/janl/io\">io</a>."
+    return template(templates.error.not_found, {
+      twitter: io.twitter 
+    })
   }
 
   return {
