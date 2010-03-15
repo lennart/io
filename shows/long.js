@@ -2,7 +2,7 @@ function(doc, req) {
   //json io
   //
   if(!doc) {
-    return template(templates.error.not_found, {
+    return template(templates.404, {
       twitter: io.twitter 
     })
   }
